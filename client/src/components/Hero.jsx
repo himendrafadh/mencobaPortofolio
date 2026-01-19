@@ -19,10 +19,10 @@ const Hero = () => {
                 <h2 className="greeting">Hello Nafisa, I'm Himendra</h2>
                 <h1 className="headline">
                     Building <span className="gradient-text">Future-Ready</span><br />
-                    Web Experiences.
+                    Web Experiences Anjay.
                 </h1>
                 <p className="subheadline">
-                    Full Stack Developer specializing in modern web technologies including Node.js and React.
+                    Full Stack Developer specializing in modern web technologies including Node.js and React amin.
                 </p>
                 <div className="cta-group">
                     <a href="#projects" className="btn btn-primary">View My Work</a>
