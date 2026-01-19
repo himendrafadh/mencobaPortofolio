@@ -1,0 +1,62 @@
+:root {
+  /* Earth Tone Theme: Green & Brown */
+  --bg-color: #0c120c;
+  /* Very dark earthy green/black */
+  --text-color: #f0f4f0;
+  --primary-color: #6da34d;
+  /* Earthy vibrant green */
+  --secondary-color: #8b5a2b;
+  /* Warm wood/brown */
+  --accent-color: #d2b48c;
+  /* Tan/Beige */
+  --glass-bg: rgba(20, 30, 20, 0.4);
+  /* Darker green tinted glass */
+  --glass-border: rgba(109, 163, 77, 0.2);
+  /* Greenish border */
+  --font-main: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
