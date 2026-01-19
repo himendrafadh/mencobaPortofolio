@@ -31,7 +31,7 @@ function App() {
   return (
     <div className="app-container">
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-        <div className="logo">Portfolio</div>
+        <div className="logo">Portofolio</div>
 
         <div className={`hamburger ${menuOpen ? 'active' : ''}`} onClick={toggleMenu}>
           <span className="bar"></span>
