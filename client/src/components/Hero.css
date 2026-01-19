@@ -147,10 +147,23 @@
 @media (max-width: 768px) {
     .headline {
         font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+
+    .greeting {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    .subheadline {
+        font-size: 1rem;
+        margin-bottom: 30px;
     }
 
     .cta-group {
         flex-direction: column;
         gap: 15px;
+        padding: 0 40px;
+        /* Add padding to button container to prevent full edge touching */
     }
 }

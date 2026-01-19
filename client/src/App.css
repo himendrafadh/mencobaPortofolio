@@ -16,27 +16,19 @@
   right: 0;
   width: 100%;
   max-width: 100%;
-  /* Full width */
   margin: 0;
   padding: 20px 40px;
-  /* More padding on sides */
   background: transparent;
-  /* Default transparent state */
   z-index: 1000;
   transition: background 0.3s ease, backdrop-filter 0.3s ease, padding 0.3s ease;
 }
 
-/* Apple-style Blur Effect on Scroll */
 .navbar.scrolled {
   background: rgba(12, 18, 12, 0.7);
-  /* Semi-transparent dark */
   backdrop-filter: blur(20px);
-  /* Heavy blur */
   -webkit-backdrop-filter: blur(20px);
-  /* For Safari */
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  padding: 15px 20px;
-  /* Slightly smaller when scrolled */
+  padding: 15px 40px;
 }
 
 .navbar .logo {
@@ -44,6 +36,13 @@
   font-weight: bold;
   color: var(--primary-color);
   letter-spacing: 1px;
+  z-index: 1001;
+  /* Ensure logo is above menu overlay */
+}
+
+.navbar .links {
+  display: flex;
+  align-items: center;
 }
 
 .navbar .links a {
@@ -52,11 +51,80 @@
   color: var(--text-color);
   opacity: 0.8;
   transition: opacity 0.3s, color 0.3s;
+  text-decoration: none;
 }
 
 .navbar .links a:hover {
   color: var(--primary-color);
   opacity: 1;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: var(--text-color);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 0 15px;
+  }
+
+  .navbar,
+  .navbar.scrolled {
+    padding: 20px;
+    /* Reduced padding on mobile */
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .navbar .links {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    flex-direction: column;
+    background-color: rgba(12, 18, 12, 0.95);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .navbar .links.active {
+    left: 0;
+  }
+
+  .navbar .links a {
+    margin: 25px 0;
+    font-size: 1.5rem;
+  }
 }
 
 main {
