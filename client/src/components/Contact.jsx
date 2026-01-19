@@ -21,7 +21,8 @@ const Contact = () => {
         setStatus('sending');
 
         try {
-            const response = await fetch('http://localhost:5000/api/contact', {
+            // Use relative path for production (Vercel rewrites will handle routing)
+            const response = await fetch('/api/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

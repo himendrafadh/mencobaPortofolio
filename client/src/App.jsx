@@ -43,7 +43,7 @@ function App() {
       </main>
 
       <footer>
-        <p>&copy; 2024 Portfolio. All rights reserved.</p>
+        <p>&copy; 2026 Portfolio. All rights reserved.</p>
       </footer>
     </div>
   )
