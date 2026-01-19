@@ -16,7 +16,7 @@ const Hero = () => {
             </div>
 
             <div className={`hero-content ${mounted ? 'fade-in' : ''}`}>
-                <h2 className="greeting">Hello Nafisa, I'm Himendra</h2>
+                <h2 className="greeting">Hello, I'm Himendra Fadhil</h2>
                 <h1 className="headline">
                     Building <span className="gradient-text">Future-Ready</span><br />
                     Web Experiences Anjay.
